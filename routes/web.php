@@ -10,6 +10,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\CampaignController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -201,6 +202,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/regulations', [DashboardController::class, 'regulations'])->name('regulations');
+Route::get('/regulations/create', [DashboardController::class, 'regulations'])->name('regulations.create');
 
 
 // Route::post('/regulations', [RegulationController::class, 'store'])->name('regulation.create');

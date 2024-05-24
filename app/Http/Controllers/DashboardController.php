@@ -33,4 +33,14 @@ class DashboardController extends Controller
     {
         return view('pages/dashboard/fintech');
     }
+
+    public function regulations()
+    {
+        return view('pages/dashboard/regulations');
+    }
+
+    public function submitRegulation()
+    {
+        return view('components/regulation/submit-regulation');
+    }
 }
